@@ -9,12 +9,11 @@
   - [Development strategy](#development-strategy)
   - [Getting Started](#getting-started)
   - [Built With](#built-with)
-  - [Test](#test)
   - [License](#license)
 
 ## About the Project
 
-This project aims to give you the opportunity to put all of the skills you have learned into one project to build your own custom travel app. Due to the nature of this course, it is very JavaScript heavy, but it is still expected you create clean and appealing HTML/CSS. You will also be targeting the DOM, working with objects, and retrieving data from 3 APIs in which one of those is reliant on another to work. Finally, this is all going to be done in a Webpack environment, using an express server, and wrapped up with service workers.
+This project aims to give you the opportunity to put all of the skills you have learned into one project to build your own API needed for store project. Due to the nature of this course, it is very JavaScript heavy, but it is still expected you create clean and appealing APIs. You will also be targeting the express app, working with test using jest, and retrieving data from fake store API in which one of those is reliant on another to work.
 
 ## API(s)
 
@@ -40,46 +39,23 @@ git clone https://github.com/mohammedelzanaty/mz-shop-api.git [folder_name]
 yarn
 ```
 
-3. Start the server
+3. Start the dev server
 
 ```bash
-yarn start
+yarn dev
 ```
 
-4. Setup the environment development or production
+4. Test with Jest
 
 ```bash
-npm run build-dev
-```
-
-or
-
-```bash
-npm run build-prod
-```
-
-5. Test with Jest
-
-```bash
-npm run test
+yarn test
 ```
 
 ## Built With
 
-- [Webpack](https://webpack.js.org/concepts/) - Asset Management
-- [Babel](https://babeljs.io/) - JavaScript Compiler
 - [Node.js](https://nodejs.org/en/) - JavaScript Runtime
 - [Express.js](https://expressjs.com/) - Server Framework for Node.js
 - [Jest](https://jestjs.io/) - Testing suit
-- [Service Workers](https://developers.google.com/web/fundamentals/primers/service-workers) - For offline capability
-
-## Test
-
-To test the application, run
-
-```bash
-npm run test
-```
 
 ## License
 
