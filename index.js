@@ -1,5 +1,5 @@
-import app from './app'
-import config from './config'
+const config = require('./config')
+const { app } = require('./app')
 
 const PORT = config.port || 3000
 const address = `0.0.0.0:${PORT}`

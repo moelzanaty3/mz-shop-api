@@ -1,6 +1,6 @@
-import { Router } from 'express'
-import axios from 'axios'
-import config from '../../config'
+const { Router } = require('express')
+const axios = require('axios')
+const config = require('../../config')
 
 const routes = Router()
 
@@ -11,7 +11,7 @@ routes.post('/', async (req, res, next) => {
     res.json({
       status: 'success',
       data: product,
-      message: 'Product created successfully',
+      message: 'Product created successfully'
     })
   } catch (err) {
     next(err)
@@ -25,7 +25,7 @@ routes.get('/', async (_req, res, next) => {
     return res.json({
       status: 'success',
       data: products,
-      message: 'Products retrieved successfully',
+      message: 'Products retrieved successfully'
     })
   } catch (err) {
     next(err)
@@ -40,7 +40,7 @@ routes.get('/:id', async (req, res, next) => {
     res.json({
       status: 'success',
       data: product,
-      message: 'Product retrieved successfully',
+      message: 'Product retrieved successfully'
     })
   } catch (err) {
     next(err)
@@ -59,7 +59,7 @@ routes.put('/:id', async (req, res, next) => {
     res.json({
       status: 'success',
       data: product,
-      message: 'Product updated successfully',
+      message: 'Product updated successfully'
     })
   } catch (err) {
     next(err)
@@ -74,11 +74,11 @@ routes.delete('/:id', async (req, res, next) => {
     res.json({
       status: 'success',
       data: product,
-      message: 'Product deleted successfully',
+      message: 'Product deleted successfully'
     })
   } catch (err) {
     next(err)
   }
 })
 
-export default routes
+module.exports = routes

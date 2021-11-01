@@ -1,28 +1,26 @@
-import express from 'express'
-import morgan from 'morgan'
-import cors from 'cors'
-import helmet from 'helmet'
-import routes from './routes'
-import errorMiddleware from './middleware/error.middleware'
+const express = require('express')
+const morgan = require('morgan')
+const cors = require('cors')
+const routes = require('./routes')
+const errorMiddleware = require('./middleware/error.middleware')
 
 const app = express()
 
 app.use(express.json())
 // HTTP request logger middleware
 app.use(morgan('dev'))
+// enable CORS
 app.use(cors())
-// HTTP security middleware headers
-app.use(helmet())
 // add routing for /api path
 app.use('/api', routes)
 // add live routing
 app.get('/', (req, res) => {
   res.json({
     status: 'success',
-    message: 'I am live 😉',
+    message: 'I am live 😉'
   })
 })
 // error handler middleware
 app.use(errorMiddleware)
 
-export default app
+module.exports = app
